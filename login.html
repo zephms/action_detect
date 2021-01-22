@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>登录界面</title>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="css/style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <script type="text/javascript" src="./js/login.js"></script>
+      <script  type="text/javascript" src="./js/open_server.js"></script>
+      <script>window.$ = window.jQuery = require("./js/jquery.js");</script>
+   </head>
+   <body class="inner_page login">
+   <div class="logo_login" style="-webkit-app-region: drag">
+      <div class="center">
+         <img width="210" src="images/logo.png" alt="#" />
+      </div>
+   </div>
+   <div class="login_form">
+      <form id="login_form" action="/student/login">
+         <fieldset>
+            <div class="field">
+               <label class="label_field">学号:</label>
+               <input type="text" name="studentNumber" placeholder="请输入12位学号"/>
+            </div>
+            <div class="field">
+               <label class="label_field">密码:</label>
+               <input type="password" name="password" placeholder="请输入密码" />
+            </div>
+            <div class="field">
+               <label class="label_field hidden">hidden label</label>
+               <a class="register" href="" id="to_register">用户注册</a>
+            </div>
+            <div class="btn_group" >
+               <label class="label_field hidden">hidden label</label>
+               <input type="button" class="main_bt" id="exit_btn" value="退出"/>
+               <input type="button" class="main_bt" id="login_btn" value="登录"/>
+            </div>
+         </fieldset>
+      </form>
+   </div>
+   </body>
+</html>
