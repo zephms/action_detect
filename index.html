@@ -17,28 +17,27 @@
 </head>
 
 <body>
-<div class="wrapper">
+<div class="wrapper" id="slideMenu">
     <nav id="sidebar" class="sidebar">
         <div class="sidebar-content js-simplebar">
             <a class="sidebar-brand" href="index.html">
                 <span class="align-middle">一体化课堂</span>
             </a>
 
-            <ul class="sidebar-nav">
                 <ul class="sidebar-nav">
                     <li class="sidebar-header">
                         课堂点名
                     </li>
 
-                    <li class="sidebar-item ">
-                        <a class="sidebar-link" id="online_check_in" href="#">
-                            <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">线上课堂点名</span>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" id="online_check_in" onclick="chpages_clicked('online_checkinPage')">
+                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">线上课堂点名</span>
                         </a>
                     </li>
 
                     <li class="sidebar-item ">
-                        <a class="sidebar-link" id="offline_check_in" href="#">
-                            <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">线下课堂点名</span>
+                        <a class="sidebar-link" id="offline_check_in" onclick="chpages_clicked('offlinecheckinPage') ">
+                            <i class="align-middle" data-feather="github"></i> <span class="align-middle">线下课堂点名</span>
                         </a>
                     </li>
                 </ul>
@@ -49,7 +48,7 @@
                     </li>
 
                     <li class="sidebar-item ">
-                        <a class="sidebar-link" id="online_check_behavior" href="#">
+                        <a class="sidebar-link" id="online_check_behavior" onclick="chpages_clicked('online_behaviorPage')">
                             <i class="align-middle" data-feather="sliders"></i> <span
                                 class="align-middle">线上行为检测</span>
                         </a>
@@ -61,10 +60,10 @@
                                 class="align-middle">线下行为检测</span>
                         </a>
                         <ul id="forms" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                            <li class="sidebar-item">
+                            <li class="sidebar-item" onclick="chpages_clicked('offline_ing')">
                                 <a class="sidebar-link" id="offline_check_behavior_state" href="#">课上（检测学习状态）</a>
                             </li>
-                            <li class="sidebar-item">
+                            <li class="sidebar-item" onclick="chpages_clicked('offline_after')">
                                 <a class="sidebar-link" id="offline_check_behavior_danger" href="#">课间（检测危险行为）</a>
                             </li>
                         </ul>
@@ -77,15 +76,15 @@
                     </li>
 
                     <li class="sidebar-item ">
-                        <a class="sidebar-link" href="index.html">
-                            <i class="align-middle" data-feather="sliders"></i> <span
+                        <a class="sidebar-link" onclick="chpages_clicked('checkinOutputPage')">
+                            <i class="align-middle" data-feather="slack"></i> <span
                                 class="align-middle">人脸识别点名分析</span>
                         </a>
                     </li>
 
                     <li class="sidebar-item ">
-                        <a class="sidebar-link" href="index.html">
-                            <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">行为检测分析</span>
+                        <a class="sidebar-link" onclick="chpages_clicked('behaviorPage')">
+                            <i class="align-middle" data-feather="monitor"></i> <span class="align-middle">行为检测分析</span>
                         </a>
                     </li>
                 </ul>
@@ -102,29 +101,29 @@
             </ul>
         </div>
     </nav>
-    <div class="main">
+    <div class="main" id="index">
         <nav class="navbar navbar-expand navbar-light navbar-bg">
             <a class="sidebar-toggle d-flex">
                 <i class="hamburger align-self-center"></i>
             </a>
 
 
-            <div class="navbar-collapse collapse" style="-webkit-app-region: drag">
+            <div class="navbar-collapse collapse">
                 <ul class="navbar-nav navbar-align">
                     <li class="nav-item dropdown">
                         <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-toggle="dropdown">
                             <i class="align-middle" data-feather="settings"></i>
                         </a>
 
-                        <a class="nav-link dropdown-toggle d-none d-sm-inline-block" style="-webkit-app-region: no-drag" data-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-toggle="dropdown">
                             <img src="images/avatar.jpg" class="avatar img-fluid rounded mr-1" alt="Charles Hall"/>
                             <span class="text-dark">小明</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" ><i class="align-middle mr-1"
-                                                                                  data-feather="user"></i> 个人资料修改</a>
-                            <a class="dropdown-item" ><i class="align-middle mr-1"
-                                                                 data-feather="help-circle"></i> 帮助中心</a>
+                            <a class="dropdown-item"><i class="align-middle mr-1"
+                                                        data-feather="user"></i> 个人资料修改</a>
+                            <a class="dropdown-item"><i class="align-middle mr-1"
+                                                        data-feather="help-circle"></i> 帮助中心</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" id="exit_a">登出</a>
                         </div>
@@ -133,13 +132,1033 @@
             </div>
         </nav>
 
-        <!--嵌入页面-->
-        <main class="content" id="mycontent">
+        <!--        <main class="content">-->
+        <!--            <div class="container-fluid p-0 index-0">-->
+        <!--                <h2 v-show="index">这里是主页内容</h2>-->
+        <!--            </div>-->
+        <!--            <div class="container-fluid p-0 index-1">-->
+        <!--                <h2 v-show="mune_1">这里是子页内容01</h2>-->
+        <!--            </div>-->
+        <!--        </main>-->
+
+        
+        
+        <!--   index     -->
+        <main class="content" id="indexPage" style="display: block;">
             <div class="container-fluid p-0">
-                <div id="12">51515</div>
-                <div id="13">6616146</div>
+
+                <h1 class="h3 mb-3">一体化课堂首页</h1>
+
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="images/unsplash-1.jpg" alt="Unsplash">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">基于数据的课堂</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">依据学生学习行为大数据挖掘分析与决策，用直观的数据了解学生对知识掌握的水平，精准地掌握来自学生的第一手学情资料。</p>
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="images/unsplash-2.jpg" alt="Unsplash">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">高效互动的课堂</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">利用智能化的移动学习工具和应用支撑平台，教师与学生、学生与学生之间的沟通与交流更加立体化，能无障碍地进行即时交流和互动。</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="images/unsplash-3.jpg" alt="Unsplash">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">动态开放的课堂</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">借助于新兴信息技术及各种智能终端</li>
+                                <li class="list-group-item">实现更为开放的教室、更为开放的课堂活动</li>
+                                <li class="list-group-item">让课前、课中、课后融为一体</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="images/unsplash-2.jpg" alt="Unsplash">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">合作探究的课堂</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">帮助有相同学习需求和兴趣的学习者自动形成学习共同体，教师可以通过平台对小组合作进行实时的数字化评价和及时的反馈。</p>
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="images/unsplash-2.jpg" alt="Unsplash">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">个性化学习的课堂</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">实现对学生的个性化学习能力的评估，有针对性地制定教学方案和辅导策略，真正实现“一对一”的个性化教学。</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="images/unsplash-2.jpg" alt="Unsplash">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">教学机智的课堂</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">基于动态学习数据分析和即时反馈</li>
+                                <li class="list-group-item">及时调整课前的教学设计</li>
+                                <li class="list-group-item">优化和改进课堂教学进程</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </main>
+
+        <!-- debug -->
+        <main class="content" id="debugPage" style="display: none;">
+            <div>
+                hhhh
+            </div>
+        </main>
+
+        <!-- 线上课堂点名 -->
+        <main class="content" id="online_checkinPage" style="display: none;">
+            <div class="container-fluid p-0">
+
+                <h1 class="h3 mb-3">线上课堂点名</h1>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">摄像机摄取画面</h5>
+                                <h6 class="card-subtitle text-muted">请在老师发起签到活动后，在 <code>规定时间内</code> 按时签到，以避免造成迟到行为。
+                                </h6>
+                            </div>
+                            <div class="table-responsive-1">
+                                <h2 class="text" style=" text-align:center;">摄像头放这里</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">签到提示</h5>
+                                <h6 class="card-subtitle text-muted">请按时签到！</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <div class="alert alert-primary alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div class="alert-icon">
+                                            <i class="far fa-fw fa-bell"></i>
+                                        </div>
+                                        <div class="alert-message">
+                                            <strong>签到成功！</strong> 祝你有一个愉快的学习经历！
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-secondary alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div class="alert-icon">
+                                            <i class="far fa-fw fa-bell"></i>
+                                        </div>
+                                        <div class="alert-message">
+                                            <strong>签到失败！</strong> 若是技术或网络问题请及时向老师反馈！
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">签到按钮</h5>
+                                <h6 class="card-subtitle text-muted">老师将规定具体签到时间，中途无法终止签到。</h6>
+                            </div>
+                            <div class="card-body">
+                                <select class="form-control mb-3">
+                                    <option selected>请选择规定签到时间</option>
+                                    <option>5 min</option>
+                                    <option>10 min</option>
+                                    <option>15 min</option>
+                                    <option>20 min</option>
+                                    <option>25 min</option>
+                                    <option>30 min</option>
+                                </select>
+                                <div class="card-body text-center">
+                                    <div class="mb-3">
+                                        <button class="btn btn-pill btn-primary">开始签到</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- 线下课堂点名 -->
+        <main class="content" id="offlinecheckinPage" style="display: none;">
+            <div class="container-fluid p-0">
+
+                <h1 class="h3 mb-3">线下课堂点名</h1>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">摄像机摄取画面</h5>
+                                <h6 class="card-subtitle text-muted">请在老师发起签到活动后，在 <code>规定时间内</code> 按时签到，以避免造成迟到行为。
+                                </h6>
+                            </div>
+                            <div class="table-responsive-1">
+                                <h2 class="text" style=" text-align:center;">摄像头放这里</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">签到提示</h5>
+                                <h6 class="card-subtitle text-muted">请按时签到！</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <div class="alert alert-primary alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div class="alert-icon">
+                                            <i class="far fa-fw fa-bell"></i>
+                                        </div>
+                                        <div class="alert-message">
+                                            <strong>签到成功！</strong> 祝你有一个愉快的学习经历！
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-secondary alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div class="alert-icon">
+                                            <i class="far fa-fw fa-bell"></i>
+                                        </div>
+                                        <div class="alert-message">
+                                            <strong>签到失败！</strong> 若是技术或网络问题请及时向老师反馈！
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">签到按钮</h5>
+                                <h6 class="card-subtitle text-muted">老师将规定具体签到时间，中途无法终止签到。</h6>
+                            </div>
+                            <div class="card-body">
+                                <select class="form-control mb-3">
+                                    <option selected>请选择规定签到时间</option>
+                                    <option>5 min</option>
+                                    <option>10 min</option>
+                                    <option>15 min</option>
+                                    <option>20 min</option>
+                                    <option>25 min</option>
+                                    <option>30 min</option>
+                                </select>
+                                <div class="card-body text-center">
+                                    <div class="mb-3">
+                                        <button class="btn btn-pill btn-primary">开始签到</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- 线上行为检测 -->
+        <main class="content" id="online_behaviorPage" style="display: none">
+            <div class="container-fluid p-0">
+
+                <h1 class="h3 mb-3">线上行为检测</h1>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">摄像机摄取画面</h5>
+                                <h6 class="card-subtitle text-muted">本产品将自动识别学生在学习过程中的 <code>不规范行为</code> ，以提高学生学习效率。
+                                </h6>
+                            </div>
+                            <div class="table-responsive-1">
+                                <h2 class="text" style=" text-align:center;">摄像头放这里</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">检测提示</h5>
+                                <h6 class="card-subtitle text-muted">请按时开启行为检测功能！</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <div class="alert alert-primary alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div class="alert-icon">
+                                            <i class="far fa-fw fa-bell"></i>
+                                        </div>
+                                        <div class="alert-message">
+                                            <strong>检测成功！</strong> 祝你有一个愉快的学习经历！
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-secondary alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div class="alert-icon">
+                                            <i class="far fa-fw fa-bell"></i>
+                                        </div>
+                                        <div class="alert-message">
+                                            <strong>检测失败！</strong> 若是技术或网络问题请及时向老师反馈！
+                                        </div>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <button class="btn btn-pill btn-primary">开始检测</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">个人行为检测分析</h5>
+                                <h6 class="card-subtitle text-muted">该功能将会针对你的课堂表现，生成你的个人分析报告。</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart chart-sm">
+                                    <canvas id="chartjs-doughnut_1"></canvas>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- 线下行为检测      -->
+        <main class="content" id="offline_ing" style="display: none">
+            <div class="container-fluid p-0">
+
+                <h1 class="h3 mb-3">线下行为检测</h1>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">摄像机摄取画面</h5>
+                                <h6 class="card-subtitle text-muted">本产品将自动识别学生在课上学习过程中的 <code>不规范行为</code> ，以检测学生学习状态。
+                                </h6>
+                            </div>
+                            <div class="table-responsive-1">
+                                <h2 class="text" style=" text-align:center;">摄像头放这里</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">检测提示</h5>
+                                <h6 class="card-subtitle text-muted">请按时开启行为检测功能！</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <div class="alert alert-primary alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div class="alert-icon">
+                                            <i class="far fa-fw fa-bell"></i>
+                                        </div>
+                                        <div class="alert-message">
+                                            <strong>检测成功！</strong> 祝你有一个愉快的学习经历！
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-secondary alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div class="alert-icon">
+                                            <i class="far fa-fw fa-bell"></i>
+                                        </div>
+                                        <div class="alert-message">
+                                            <strong>检测失败！</strong> 若是技术或网络问题请及时向老师反馈！
+                                        </div>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <button class="btn btn-pill btn-primary">开始检测</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">班级行为检测分析</h5>
+                                <h6 class="card-subtitle text-muted">该功能将会针对整个课堂表现，生成班级行为分析报告。</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart chart-sm">
+                                    <canvas id="chartjs-pie_2"></canvas>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- 线下行为检测      -->
+        <main class="content" id="offline_after" style="display: none">
+            <div class="container-fluid p-0">
+
+                <h1 class="h3 mb-3">线下行为检测</h1>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">摄像机摄取画面</h5>
+                                <h6 class="card-subtitle text-muted">本产品将自动识别学生在课后教室活动过程中的 <code>不规范行为</code> ，以防止学生在课间玩耍时造成危险行为。
+                                </h6>
+                            </div>
+                            <div class="table-responsive-1">
+                                <h2 class="text" style=" text-align:center;">摄像头放这里</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">检测提示</h5>
+                                <h6 class="card-subtitle text-muted">请按时开启行为检测功能！</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <div class="alert alert-primary alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div class="alert-icon">
+                                            <i class="far fa-fw fa-bell"></i>
+                                        </div>
+                                        <div class="alert-message">
+                                            <strong>检测成功！</strong> 祝你有一个愉快的学习经历！
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-secondary alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div class="alert-icon">
+                                            <i class="far fa-fw fa-bell"></i>
+                                        </div>
+                                        <div class="alert-message">
+                                            <strong>检测失败！</strong> 若是技术或网络问题请及时向老师反馈！
+                                        </div>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <button class="btn btn-pill btn-primary">开始检测</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">班级行为检测分析</h5>
+                                <h6 class="card-subtitle text-muted">该功能将会针对整个课堂表现，生成班级行为分析报告。</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart chart-sm">
+                                    <canvas id="chartjs-pie"></canvas>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- 签到情况(人脸识别点名分析)-->
+        <main class="content" id="checkinOutputPage" style="display: none">
+            <div class="container-fluid p-0">
+
+                <h1 class="h3 mb-3">课堂签到情况</h1>
+
+                <div class="row">
+                    <div class="col-12 col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">签到成功</h5>
+                                <h6 class="card-subtitle text-muted">按时签到的学生的信息将会放置在这里。</h6>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th style="width:25%;">姓名</th>
+                                    <th style="width:25%;">学号</th>
+                                    <th class="d-none d-md-table-cell" style="width:30%">签到时间</th>
+                                    <th style="width:20%;">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>卢仲</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">June 21, 1961</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>张飒名</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">May 15, 1948</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>哑奴与</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">September 14, 1965</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>季华园</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">April 2, 1971</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>罗志思</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">October 12, 1966</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">签到迟到</h5>
+                                <h6 class="card-subtitle text-muted">学生没有按时签到，造成 <code>迟到行为</code>。 </h6>
+                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th style="width:25%;">姓名</th>
+                                    <th style="width:25%;">学号</th>
+                                    <th class="d-none d-md-table-cell" style="width:30%">签到时间</th>
+                                    <th style="width:20%;">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>卢仲</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">June 21, 1961</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>张飒名</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">May 15, 1948</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>哑奴与</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">September 14, 1965</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>季华园</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">April 2, 1971</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>罗志思</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">October 12, 1966</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">旷课行为</h5>
+                                <h6 class="card-subtitle text-muted">正式上课15分钟内没有签到成功， <code>系统自动判定旷课</code> 。</h6>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th style="width:25%;">姓名</th>
+                                    <th style="width:25%;">学号</th>
+                                    <th class="d-none d-md-table-cell" style="width:30%">签到时间</th>
+                                    <th style="width:20%;">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>卢仲</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">June 21, 1961</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>张飒名</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">May 15, 1948</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>哑奴与</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">September 14, 1965</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>季华园</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">April 2, 1971</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>罗志思</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">October 12, 1966</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">学生请假</h5>
+                                <h6 class="card-subtitle text-muted">学生事假、病假行为，由老师操作，更改记录。</h6>
+                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th style="width:25%;">姓名</th>
+                                    <th style="width:25%;">学号</th>
+                                    <th class="d-none d-md-table-cell" style="width:30%">签到时间</th>
+                                    <th style="width:20%;">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>卢仲</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">June 21, 1961</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>张飒名</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">May 15, 1948</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>哑奴与152</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">September 14, 1965</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>季华园</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">April 2, 1971</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>罗志思</td>
+                                    <td>180702240128</td>
+                                    <td class="d-none d-md-table-cell">October 12, 1966</td>
+                                    <td class="table-action">
+                                        <a><i data-toggle="modal" data-target="#defaultModalPrimary"
+                                              class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="defaultModalPrimary" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">修改签到情况</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body m-3">
+                                    <p class="mb-0">
+                                        学生：{{messeage}}，学号：{{message}}，因不可控因素，如断网断电、事假等造成无法按时签到，请及时联系老师修改签到情况。</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                                    <button type="button" class="btn btn-primary">修改为正常签到</button>
+                                    <button type="button" class="btn btn-success">修改为事假</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- 行为检测分析-->
+        <main class="content" id="behaviorPage" style="display: none">
+            <div class="container-fluid p-0">
+
+                <h1 class="h3 mb-3">行为检测分析报告</h1>
+
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="card flex-fill w-100">
+                            <div class="card-header">
+                                <h5 class="card-title">课堂情况趋势图</h5>
+                                <h6 class="card-subtitle text-muted">通过人工智能分析，自动评估学生课堂总体表现。</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart">
+                                    <canvas id="chartjs-line"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">课堂总体情况</h5>
+                                <h6 class="card-subtitle text-muted">包含课堂总人数、整体参与度、认真度等数据分析。 <code>日期</code></h6>
+                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th style="width:75%;">数据分析</th>
+                                    <th>参数</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>课堂总人数：</td>
+                                    <td>18</td>
+                                </tr>
+                                <tr>
+                                    <td>整体参与度：</td>
+                                    <td>0.5</td>
+                                </tr>
+                                <tr>
+                                    <td>整体认真度：</td>
+                                    <td>0.6</td>
+                                </tr>
+                                <tr>
+                                    <td>观测开始时间：</td>
+                                    <td>21：53:13</td>
+                                </tr>
+                                <tr>
+                                    <td>观测总时长：</td>
+                                    <td>89</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">学生总体情况扇形图</h5>
+                                <h6 class="card-subtitle text-muted">具体分析每一位学生的行为状态，判断行为占比。</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart chart-sm">
+                                    <canvas id="chartjs-pie_1"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">学生总体情况</h5>
+                                <h6 class="card-subtitle text-muted">包含书写总人次数、玩手机总人次数、传递纸条总人次数等数据分析。 <code>日期</code>
+                                </h6>
+                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th style="width:75%;">线上行为检测数据分析</th>
+                                    <th>参数</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>线上听课总人次数：</td>
+                                    <td>暂无</td>
+                                </tr>
+                                <tr>
+                                    <td>线上说话总人次数：</td>
+                                    <td>暂无</td>
+                                </tr>
+                                <tr>
+                                    <td>线上旷课总人次数：</td>
+                                    <td>暂无</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th style="width:75%;">线下行为检测数据分析</th>
+                                    <th>参数</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>线下书写总人次数：</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>线下放包总人次数：</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>线下玩手机总人次数：</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>线下看纸条总人次数：</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>线下传递纸条总人次数：</td>
+                                    <td>6</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">学生个人行为扇形图</h5>
+                                <h6 class="card-subtitle text-muted">具体分析单个学生的行为状态，判断行为占比。</h6>
+                                <br>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">搜索：</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" placeholder="请输入学号">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <div class="chart chart-sm">
+                                    <canvas id="chartjs-doughnut"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">学生单个情况</h5>
+                                <h6 class="card-subtitle text-muted">该功能将会针对单个学生的课堂表现，生成个人的分析报告。 <code>日期</code></h6>
+                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th style="width:75%;">数据分析</th>
+                                    <th>参数</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>个人参与度：</td>
+                                    <td>0.6</td>
+                                </tr>
+                                <tr>
+                                    <td>个人认真度：</td>
+                                    <td>0.8</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
 
         <footer class="footer">
             <div class="container-fluid">
@@ -169,14 +1188,356 @@
             </div>
         </footer>
     </div>
+
+
 </div>
 
 
 <script src="js/app.js"></script>
 <script src="js/index.js"></script>
 <script src="js/c.js"></script>
+<script src="js/changePage.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="js/index-decorate.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    $(function() {
+        // Line chart
+        new Chart(document.getElementById("chartjs-line"), {
+            type: "line",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                datasets: [{
+                    label: "Sales ($)",
+                    fill: true,
+                    backgroundColor: "transparent",
+                    borderColor: window.theme.primary,
+                    data: [2115, 1562, 1584, 1892, 1487, 2223, 2966, 2448, 2905, 3838, 2917, 3327]
+                }, {
+                    label: "Orders",
+                    fill: true,
+                    backgroundColor: "transparent",
+                    borderColor: "#adb5bd",
+                    borderDash: [4, 4],
+                    data: [958, 724, 629, 883, 915, 1214, 1476, 1212, 1554, 2128, 1466, 1827]
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    intersect: false
+                },
+                hover: {
+                    intersect: true
+                },
+                plugins: {
+                    filler: {
+                        propagate: false
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        reverse: true,
+                        gridLines: {
+                            color: "rgba(0,0,0,0.05)"
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            stepSize: 500
+                        },
+                        display: true,
+                        borderDash: [5, 5],
+                        gridLines: {
+                            color: "rgba(0,0,0,0)",
+                            fontColor: "#fff"
+                        }
+                    }]
+                }
+            }
+        });
+    });
+</script>
+<script>
+    $(function() {
+        // Bar chart
+        new Chart(document.getElementById("chartjs-bar"), {
+            type: "bar",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                datasets: [{
+                    label: "Last year",
+                    backgroundColor: window.theme.primary,
+                    borderColor: window.theme.primary,
+                    hoverBackgroundColor: window.theme.primary,
+                    hoverBorderColor: window.theme.primary,
+                    data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+                    barPercentage: .75,
+                    categoryPercentage: .5
+                }, {
+                    label: "This year",
+                    backgroundColor: "#dee2e6",
+                    borderColor: "#dee2e6",
+                    hoverBackgroundColor: "#dee2e6",
+                    hoverBorderColor: "#dee2e6",
+                    data: [69, 66, 24, 48, 52, 51, 44, 53, 62, 79, 51, 68],
+                    barPercentage: .75,
+                    categoryPercentage: .5
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                },
+                scales: {
+                    yAxes: [{
+                        gridLines: {
+                            display: false
+                        },
+                        stacked: false,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    }],
+                    xAxes: [{
+                        stacked: false,
+                        gridLines: {
+                            color: "transparent"
+                        }
+                    }]
+                }
+            }
+        });
+    });
+</script>
+<script>
+    $(function() {
+        // Doughnut chart
+        new Chart(document.getElementById("chartjs-doughnut"), {
+            type: "doughnut",
+            data: {
+                labels: ["Social", "Search Engines", "Direct", "Other"],
+                datasets: [{
+                    data: [260, 125, 54, 146],
+                    backgroundColor: [
+                        window.theme.primary,
+                        window.theme.success,
+                        window.theme.warning,
+                        "#dee2e6"
+                    ],
+                    borderColor: "transparent"
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                cutoutPercentage: 65,
+                legend: {
+                    display: false
+                }
+            }
+        });
+    });
+</script>
+<script>
+    $(function() {
+        // Pie chart
+        new Chart(document.getElementById("chartjs-pie"), {
+            type: "pie",
+            data: {
+                labels: ["Social", "Search Engines", "Direct", "Other"],
+                datasets: [{
+                    data: [260, 125, 54, 146],
+                    backgroundColor: [
+                        window.theme.primary,
+                        window.theme.warning,
+                        window.theme.danger,
+                        "#dee2e6"
+                    ],
+                    borderColor: "transparent"
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                }
+            }
+        });
+    });
+</script>
+<script>
+    $(function() {
+        // Pie chart
+        new Chart(document.getElementById("chartjs-pie_1"), {
+            type: "pie",
+            data: {
+                labels: ["Social", "Search Engines", "Direct", "Other"],
+                datasets: [{
+                    data: [260, 125, 54, 146],
+                    backgroundColor: [
+                        window.theme.primary,
+                        window.theme.warning,
+                        window.theme.danger,
+                        "#dee2e6"
+                    ],
+                    borderColor: "transparent"
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                }
+            }
+        });
+    });
+</script>
+<script>
+    $(function() {
+        // Doughnut chart
+        new Chart(document.getElementById("chartjs-doughnut_1"), {
+            type: "doughnut",
+            data: {
+                labels: ["Social", "Search Engines", "Direct", "Other"],
+                datasets: [{
+                    data: [260, 125, 54, 146],
+                    backgroundColor: [
+                        window.theme.primary,
+                        window.theme.success,
+                        window.theme.warning,
+                        "#dee2e6"
+                    ],
+                    borderColor: "transparent"
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                cutoutPercentage: 65,
+                legend: {
+                    display: false
+                }
+            }
+        });
+    });
+</script>
+<script>
+    $(function() {
+        // Pie chart
+        new Chart(document.getElementById("chartjs-pie_2"), {
+            type: "pie",
+            data: {
+                labels: ["Social", "Search Engines", "Direct", "Other"],
+                datasets: [{
+                    data: [260, 125, 54, 146],
+                    backgroundColor: [
+                        window.theme.primary,
+                        window.theme.warning,
+                        window.theme.danger,
+                        "#dee2e6"
+                    ],
+                    borderColor: "transparent"
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                }
+            }
+        });
+    });
+</script>
+<script>
+    var slideMenu = new Vue({
+        el: "#slideMenu",
+        data: {
+            index: true,
+            mune_1: false,
+            mune_2: false,
+            mune_3: false,
+            mune_4: false,
+            mune_5: false,
+            mune_6: false,
+            mune_7: false,
+        },
+        methods: {
+            changeMenu_1: function () {
+                this.index = false;
+                this.mune_1 = true;
+                this.mune_2 = false;
+                this.mune_3 = false;
+                this.mune_4 = false;
+                this.mune_5 = false;
+                this.mune_6 = false;
+                this.mune_7 = false;
+            },
+            changeMenu_2: function () {
+                this.index = false;
+                this.mune_1 = false;
+                this.mune_2 = true;
+                this.mune_3 = false;
+                this.mune_4 = false;
+                this.mune_5 = false;
+                this.mune_6 = false;
+                this.mune_7 = false;
+            },
+            changeMenu_3: function () {
+                this.index = false;
+                this.mune_1 = false;
+                this.mune_2 = false;
+                this.mune_3 = true;
+                this.mune_4 = false;
+                this.mune_5 = false;
+                this.mune_6 = false;
+                this.mune_7 = false;
+            },
+            changeMenu_4: function () {
+                this.index = false;
+                this.mune_1 = false;
+                this.mune_2 = false;
+                this.mune_3 = false;
+                this.mune_4 = true;
+                this.mune_5 = false;
+                this.mune_6 = false;
+                this.mune_7 = false;
+            },
+            changeMenu_5: function () {
+                this.index = false;
+                this.mune_1 = false;
+                this.mune_2 = false;
+                this.mune_3 = false;
+                this.mune_4 = false;
+                this.mune_5 = true;
+                this.mune_6 = false;
+                this.mune_7 = false;
+            },
+            changeMenu_6: function () {
+                this.index = false;
+                this.mune_1 = false;
+                this.mune_2 = false;
+                this.mune_3 = false;
+                this.mune_4 = false;
+                this.mune_5 = false;
+                this.mune_6 = true;
+                this.mune_7 = false;
+            },
+            changeMenu_7: function () {
+                this.index = false;
+                this.mune_1 = false;
+                this.mune_2 = false;
+                this.mune_3 = false;
+                this.mune_4 = false;
+                this.mune_5 = false;
+                this.mune_6 = false;
+                this.mune_7 = true;
+            },
+        }
+    })
+</script>
 </body>
 
 </html>

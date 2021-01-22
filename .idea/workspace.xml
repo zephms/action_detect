@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="156fc969-72f5-44e1-9cc9-6c3b4fea7a46" name="Default Changelist" comment="" />
+    <list default="true" id="156fc969-72f5-44e1-9cc9-6c3b4fea7a46" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/changePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +19,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1mjplprDSK2n9DLEY15coyaOIlz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,6 +51,8 @@
       <recent name="C:\Users\22360\Desktop\行为检测\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\22360\Desktop\行为检测\js" />
+      <recent name="C:\Users\22360\Desktop\行为检测" />
       <recent name="C:\Users\22360\Desktop\行为检测\python" />
     </key>
   </component>
@@ -86,6 +96,7 @@
       <workItem from="1610716200759" duration="1083000" />
       <workItem from="1610804880204" duration="38000" />
       <workItem from="1611304492192" duration="530000" />
+      <workItem from="1611305205432" duration="703000" />
     </task>
     <servers />
   </component>
