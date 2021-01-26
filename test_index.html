@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./js/c.js"></script>
+    <style>
+        .btn{
+            background-color: green;
+            display: inline-block;
+        }
+    </style>
+    <script>
+            // 1 引入模块
+            const net = require("net");
+
+            const analysis = function (str_) {
+                srcstr = "data:image/jpg;base64," + str_;
+                var element = document.getElementById("camera");
+                element.setAttribute("src", srcstr);
+                return "";
+            }
+
+            // 2 创建服务器
+            let clientArr = [];
+            const server = net.createServer();
+            // 3 绑定链接事件
+            server.on("connection", (person) => {
+                console.log(clientArr.length);
+                // 记录链接的进程
+                person.id = clientArr.length;
+                clientArr.push(person);
+                person.setEncoding("utf8");
+                // 客户socket进程绑定事件
+                person.on("data", (chunk) => {
+                    clientArr.forEach((val) => {
+                        // 数据写入全部客户进程中
+                        //////////// 数据在这里处理
+                        val.write(analysis(chunk));
+                    });
+                });
+                person.on("close", (p1) => {
+                    clientArr[p1.id] = null;
+                });
+                person.on("error", (p1) => {
+                    clientArr[p1.id] = null;
+                });
+            });
+            server.listen(801);
+
+            function qiandao() {
+                document.getElementsByClassName("btn").innerHTML = "记录中";
+                csend("record_face");
+                document.getElementsByClassName("btn").innerHTML = "已经录入";
+            }
+    </script>
+</head>
+<body>
+    <div class="btn" onclick="javascript:qiandao()">签到</div>
+    <img id="camera" src=""/>
+</body>
+</html>

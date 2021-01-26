@@ -1,0 +1,24 @@
+
+在main.js中 这个index.html的地方修改程序入口点 => 学生端or教师端
+
+ipcMain.on('login-success', (event, args) => {
+    mainWin = new BrowserWindow({
+        width:1000,
+        height:600,
+        webPreferences:{
+            nodeIntegration:true,
+            enableRemoteModule:true
+        },
+        resizable:false,
+        frame:false,
+    })
+    loginWin.close()
+    mainWin.loadFile("index.html")
+})
+
+
+还有,端口不能定死
+端口关闭也得确认一下
+
+
+camera 摄像头出问题的逻辑还得整一下

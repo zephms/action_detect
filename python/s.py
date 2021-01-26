@@ -1,11 +1,13 @@
 import socket
 import traceback
 import time
+import camera
 
 def analysis(str_):
     str_ = str_.decode()
     print(str_)
     if str_ == "online_check_in":
+        # camera.m()
         #TODO:执行线上点名的python脚本并返回相应的数据（return）
         return "online_check_in"
     elif str_ == "offline_check_in":
@@ -20,6 +22,9 @@ def analysis(str_):
     elif str_ == "offline_check_behavior_state":
         # todo:执行线下状态检测的python脚本并返回相应的数据（return）
         return "offline_check_behavior_state"
+    elif str_ == "record_face":
+        camera.m()
+
     else:
         return "error"
 

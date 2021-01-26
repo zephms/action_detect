@@ -39,7 +39,9 @@ ipcMain.on('login-success', (event, args) => {
         frame:false,
     })
     loginWin.close()
-    mainWin.loadFile("index.html")
+    mainWin.loadFile("test_index.html")
+
+    mainWin.webContents.openDevTools()
 })
 
 ipcMain.on('login-error', function () {
